@@ -1,0 +1,535 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aserts/css/style.css">
+
+    <title>Menu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fecccc;
+            box-shadow: 0px, 3px, 10 px black;
+            font-family: Marck Script;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            font-family: Inter;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 58px;
+            letter-spacing: 0em;
+            text-align: left;
+            height: 140px;
+
+
+        }
+
+        .nav-pet {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 6rem;
+
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .logo h1 {
+            color: black;
+
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .nav-list ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+        }
+
+        .nav-item {
+            margin: 0 15px;
+
+        }
+
+        .nav-list {
+            text-decoration: none;
+            font-size: 1.15rem;
+            color: #fff;
+            font-weight: 300;
+            font-style: italic;
+            position: absolute;
+            width: 91px;
+            height: 29px;
+            left: 1018px;
+            top: 103px;
+
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .login-button button {
+            border: none;
+            background-color: #FBADAD;
+            color: black;
+            border-radius: 20px;
+            width: 130px;
+            height: 60px;
+            position: fixed;
+
+
+
+        }
+
+        .login-button button {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.1rem;
+            top: 25px;
+            right: 90px;
+            position: fixed;
+
+
+        }
+
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 20px;
+            left: 0px;
+            bottom: 0px;
+            background: #fecccc;
+            text-align: center;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 200;
+            line-height: 15px;
+            letter-spacing: 0em;
+
+        }
+
+        body {
+            position: fixed;
+            background-image: url("{% static 'assets/Body.png' %}");
+        }
+
+        section {
+            position: absolute;
+            width: 1755px;
+            height: 760px;
+            left: 47px;
+            top: 162px;
+            background: #FFFFFF;
+            border-radius: 100px;
+            text-align: center;
+        }
+
+        #divBusca {
+            position: fixed;
+            background-color: #FFFFFF;
+            position: absolute;
+            border: solid 1px;
+            border-radius: 15px;
+            ;
+            width: 550px;
+            top: -74px
+        }
+
+        #txtBusca {
+            float: left;
+            background-color: transparent;
+            padding-left: 5px;
+            font-style: italic;
+            font-size: 18px;
+            border: none;
+            height: 50px;
+            width: 500px;
+        }
+
+        .loginimage {
+            position: fixed;
+            width: 32px;
+            height: 27.68px;
+            left: 1138px;
+            top: 46px;
+
+        }
+
+        .gatos {
+            position: absolute;
+            width: 213px;
+            height: 19px;
+            left: 91px;
+            top: 320px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #000000;
+        }
+
+        .line {
+            position: absolute;
+            width: 1600px;
+            height: 0px;
+            left: 82px;
+            top: 530px;
+
+            border: 1px solid #000000;
+            transform: rotate(0.05deg);
+        }
+
+        .cachorros {
+            position: absolute;
+            width: 249px;
+            height: 19px;
+            left: 91px;
+            top: 550px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #000000;
+
+        }
+    </style>
+</head>
+
+<body img src="{% static 'assets/Body.png' %}" )>
+    <header>
+        <nav class="nav-pet">
+            <div class="logo">
+                <a href="{% url 'inicio' %}"> <img src="{% static 'assets/NossoPetShop.png' %}">
+
+
+            </div>
+            <div class="nav-list" div style="color:black;">
+                <ul>
+                    <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link" div
+                            style="color:black; text-decoration: none;">Serviços</a></li>
+                    <li class="nav-item"><a href="{% url 'produtos' %}" class="nav-link" div
+                            style="color:black;text-decoration: none;">Produtos</a></li>
+                    <li class="nav-item"><a href="{% url 'agendamentos' %}" class="nav-link" div
+                            style="color:black; text-decoration: none;">Agendamentos</a></li>
+                    <li class="nav-item"><a href="{% url 'contatos' %}" class="nav-link" div
+                            style="color:black; text-decoration: none;">Contatos</a></li>
+
+                </ul>
+                <div id="divBusca">
+                    <a href="#"></a><input type="text" id="txtBusca" placeholder="Pesquisar..." />
+
+                    <a href="#"> <img src="{% static 'assets/lupa.png' %}" id="btnBusca" alt="Buscar" height="35"
+                            width="40" />
+                </div>
+            </div>
+
+            </div>
+            <div class="login-button">
+                <button><a href="{% url 'login' %}">
+                        <div div style="height: 32px;
+                    width: 52px; ">
+                            <img src="{% static 'assets/login2.png' %}" alt="Image"  width="40" height="35" div style="margin-top: 5px; position: fixed; margin-left: -25px;">
+                        </div>
+                        <div div style="font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 17px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    margin-top: -45px;
+                    margin-left: 30px;
+                    color:black;
+                    text-decoration: none;
+                    "><strong>{{ nome }}</strong><br>
+                    <a href="{% url 'sair' %}"><strong>Entrar/Sair</strong></a>
+                </a></button>  
+            </div>
+        </nav>
+
+    </header>
+    <section>
+        <div class="retangulo">
+            <img src="{% static 'inicio/assets/Logo.png' %}" div
+                style="margin-top:50px; border-radius: 15px; width: 1000px; height: 230px;">
+        </div>
+        <div class="gatos">
+            <p>Recomendados para gatos</p>
+            <p div style="position: absolute;
+            width: 54px;
+            height: 16px;
+           right: -1340px;
+            top: 1px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            /* identical to box height */
+            
+            text-decoration-line: underline;
+            
+            color: #000000;"><a href="{% url 'produtos' %}">Ver mais</p></a>
+
+
+
+            <div class="gatosimg" div style=" display: flex;">
+
+                <p div style="box-sizing: border-box;
+
+                position: absolute;
+                width: 85px;
+                height: 25px;
+                left: 113px;
+                top: 170px;
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                border-radius: 50px;">R$ 50.00</p><img src="{% static 'inicio/assets/brinquedogato.jpg' %}"
+                    style="width: 300px; height: 150px; padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+              position: absolute;
+              width: 85px;
+              height: 25px;
+              left: 288px;
+              top: 170px;
+              background: #FFFFFF;
+              border: 1px solid #000000;
+              border-radius: 50px;">R$ 69.00</p><img src="{% static 'inicio/assets/kitdebrinquedos.jpeg' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+                position: absolute;
+                width: 85px;
+                height: 25px;
+                left: 553px;
+                top: 170px;
+                
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                border-radius: 50px;">R$ 35.00</p><img src="{% static 'inicio/assets/arranhador-gatos.jpg' %}"
+                    style="width: 300px; height: 150px;padding-left: 100px;">
+                <img src="{% static 'inicio/assets/arranhadormaiscasacat.png' %}" style="width: 300px; height: 150px;padding-left: 60px;">
+
+                <p div style="box-sizing: border-box;
+
+                position: absolute;
+                width: 85px;
+                height: 25px;
+                left: 772px;
+                top: 170px;
+                
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                border-radius: 50px;">R$ 50.00</p><img src="{% static 'inicio/assets/brinquedocat.jpg' %}"
+                    style="width: 300px; height: 150px;padding-left: 10px;">
+                <p div style="box-sizing: border-box;
+
+                position: absolute;
+                width: 85px;
+                height: 25px;
+                left: 1000px;
+                top: 170px;
+                
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                border-radius: 50px;">R$ 5.00</p><img src="{% static 'inicio/assets/coleiraGato.jpeg' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+                position: absolute;
+                width: 85px;
+                height: 25px;
+                left: 1250px;
+                top: 170px;
+                
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                border-radius: 50px;">R$ 25.00</p><img src="{% static 'inicio/assets/roupa.jpeg' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+                position: absolute;
+                width: 95px;
+                height: 25px;
+                left: 1450px;
+                top: 170px;
+                
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                border-radius: 50px;">R$ 150.00</p><img src="{% static 'inicio/assets/brinquedoarranhador.png' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+
+            </div>
+        </div>
+        <div class="line">
+
+        </div>
+        </div>
+        <div class="cachorros">
+            <p>Recomendados para cachorros</p><br>
+            <p div style="position: absolute;
+            width: 54px;
+            height: 16px;
+           right: -1300px;
+            top: 1px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            /* identical to box height */
+            
+            text-decoration-line: underline;
+            
+            color: #000000;"><a href="{% url 'produtos' %}">Ver mais</p></a>
+            <div class="cachorrosimg" div style=" display: flex;">
+
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 100px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 10.00</p><img src="{% static 'inicio/assets/coleira-para-cachorro-filhote.jpg' %}"
+                    style="width: 300px; height: 150px; padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 288px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 30.00</p><img src="{% static 'inicio/assets/roupacachorrafemea.jpeg' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 510px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 50.00</p><img src="{% static 'inicio/assets/roupacachorra.jpg' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 770px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 15.00</p><img src="{% static 'inicio/assets/coleiradog.jpg' %}"
+                    style="width: 300px; height: 150px;padding-left: 100px;">
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 1000px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 10.00</p><img src="{% static 'inicio/assets/gravata.jpeg' %}"
+                    style="width: 300px; height: 150px;padding-left: 90px;">
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 1220px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 69.00</p><img src="{% static 'inicio/assets/kitdebrinquedos.jpeg' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+                <p div style="box-sizing: border-box;
+
+            position: absolute;
+            width: 85px;
+            height: 25px;
+            left: 1450px;
+            top: 185px;
+            
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 50px;">R$ 10.00</p><img src="{% static 'inicio/assets/osso.png' %}"
+                    style="width: 300px; height: 150px;padding-left: 60px;">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Nosso Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

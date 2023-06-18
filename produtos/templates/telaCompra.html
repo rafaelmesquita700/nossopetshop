@@ -1,0 +1,316 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aserts/css/style.css">
+
+    <title>Menu</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+  left: 0;
+  width: 100%;
+    background:  #fecccc;
+    box-shadow: 0px, 3px, 10 px black;
+    font-family: Marck Script;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+
+font-family: Inter;
+font-size: 48px;
+font-weight: 400;
+line-height: 58px;
+letter-spacing: 0em;
+text-align: left;
+height: 140px;
+
+
+}
+.nav-pet{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+
+
+}
+.logo{
+    display:flex;
+    align-items: center;
+}
+.logo h1{
+    color: black;
+  
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+}
+.nav-item{
+    margin: 0 15px;
+
+}
+.nav-list{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+width: 91px;
+height: 29px;
+left: 1018px;
+top: 103px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+}
+.login-button button{
+    border: none;
+    background-color: #FBADAD ;
+    color: black;
+    border-radius: 20px;
+    width: 130px;
+    height: 60px;
+    
+
+
+}
+.login-button button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    top: -54px; 
+   
+}
+
+footer{
+    position: fixed;
+            width: 100%;
+            height: 20px;
+            left: 0px;
+            bottom: 0px;
+            background:  #fecccc;
+            text-align: center;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 200;
+            line-height: 15px;
+            letter-spacing: 0em;
+
+        }
+        body{
+            background-image: url("/static/assets/Body.png");
+        }
+        section{
+            position: absolute;
+            width: 1755px;
+            height: 760px;
+            left: 47px;
+            top: 162px;
+            background: #FFFFFF;
+            border-radius: 100px;
+            text-align: center;
+        }
+        #divBusca{
+  background-color:#FFFFFF;
+  position: absolute;
+  border:solid 1px;
+  border-radius: 15px;;
+  width:550px;
+  top: -74px
+
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:50px;
+  width:500px;
+}
+
+.loginimage{
+    position: absolute;
+width: 32px;
+height: 27.68px;
+left: 1138px;
+top: 46px;
+
+}
+
+.btn{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor:pointer;
+    width: 400px;
+}
+.btn-pink{
+    background: #FBADAD ;
+    box-shadow:0 5px 0 #FBADAD;
+}
+.btn-pink:hover{
+    background:pink;
+    box-shadow:0 5px 0 #FBADAD;
+    color:black;
+}
+.btn-pink:active{
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+.retangulo2{
+    position: absolute;
+width: 360px;
+height: 360px;
+left: 119px;
+top: 236px;
+
+background: #D9D9D9;
+}
+
+
+
+        
+    </style>
+</head>
+<body img src="{% static 'assets/Body.png' %}"> 
+    <header >
+        <nav class="nav-pet">
+            <div class="logo">
+                <a href="{% url 'inicio' %}"> <img src="{% static 'assets/NossoPetShop.png' %}"></a>
+               
+
+            </div>
+            <div class="nav-list"  div style="color:black;">
+                <ul >
+                    <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link" div style="color:black; text-decoration: none;">Serviços</a></li>
+                    <li class="nav-item"><a href="{% url 'produtos' %}" class="nav-link" div style="color:black;text-decoration: none;">Produtos</a></li>
+                    <li class="nav-item"><a href="{% url 'agendamentos' %}" class="nav-link" div style="color:black; text-decoration: none;">Agendamentos</a></li>
+                    <li class="nav-item"><a href="{% url 'contatos' %}" class="nav-link"div style="color:black; text-decoration: none;">Contatos</a></li>
+                
+                </ul>
+                <div id="divBusca">
+                    <a href="#"></a><input type="text" id="txtBusca" placeholder="Pesquisar..."/>
+                 
+                    <a href="#"> <img src="{% static 'assets/lupa.png' %}" id="btnBusca" alt="Buscar" height="35" width="40"/>
+                    </div>
+                  </div>
+
+            </div>
+           
+            
+        </nav>
+        
+    </header>
+    <section>
+        <div class="retangulo">
+    
+            <div class="retangulo3" div style="color:black;">
+                <div class="quantity-input" style="margin-top: 100px;">
+                 
+                  <input type="number" id="quantidade" name="quantidade" min="1" placeholder="Selecione a quantidade">
+                
+                </div>
+                <p style="margin-top: 100px; font-size: 18px;"><strong>Forma de pagamento</strong></p>
+                <br>
+                <input type="radio" name="radmetodopag" value="dinheiro" id="CM">
+                <label for="CM" style="font-size: 16px;">Dinheiro</label>
+                <br>
+                <br>
+                <input type="radio" name="radmetodopag" value="pix" id="AD">
+                <label for="AD" style="font-size: 16px;">Pix</label>
+                <div>
+                  <p style="margin-top: 100px; font-size: 18px;"><strong>Forma de entrega</strong></p>
+                  <br>
+                  <input type="radio" name="radformaentrega" value="delivery" id="DE">
+                  <label for="DE" style="font-size: 16px;">Delivery</label>
+                  <br>
+                  <br>
+                  <input type="radio" name="radformaentrega" value="loja" id="LO">
+                  <label for="LO" style="font-size: 16px;">Retirar na loja</label>
+                </div>
+              </div>
+              
+              <button type="submit" style="position: relative;
+                width: 200px;
+                height: 80px;
+                left: 789px;
+                top: 574px;
+                background: #FECCCC;
+                border-radius: 10px; position: absolute;
+                border:none;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;">Compre Agora</button>
+              
+              </div>
+              </div>
+              </div>
+              <div id="res"></div>
+              </section>
+              <footer>
+                <p>&copy; 2023 Nosso Pet Shop. Todos os direitos reservados.</p>
+              </footer>
+              <script>
+                // Selecionando o botão "Compre Agora"
+                const btnCompreAgora = document.querySelector('button[type="submit"]');
+              
+                // Adicionando um ouvinte de evento para o clique no botão
+                btnCompreAgora.addEventListener('click', function() {
+                  // Obtendo a quantidade selecionada
+                  const quantidade = document.getElementById('quantidade').value;
+              
+                  // Obtendo o método de pagamento selecionado
+                  const metodoPagamento = document.querySelector('input[name="radmetodopag"]:checked');
+              
+                  // Obtendo a forma de entrega selecionada
+                  const formaEntrega = document.querySelector('input[name="radformaentrega"]:checked');
+              
+                  // Realizando a validação dos campos
+                  if (quantidade && metodoPagamento && formaEntrega) {
+                    alert('Compra realizada com sucesso!');
+                  } else {
+                    alert('Por favor, preencha todos os campos antes de prosseguir.');
+                  }
+                });
+              </script>
+              
+
+
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="aserts/css/style.css">
+
+  <title>Menu</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fecccc;
+      box-shadow: 0px, 3px, 10 px black;
+      font-family: Marck Script;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      font-family: Inter;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 58px;
+      letter-spacing: 0em;
+      text-align: left;
+      height: 140px;
+
+
+    }
+
+    .nav-pet {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 6rem;
+
+
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo h1 {
+      color: black;
+
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .nav-list ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+
+    }
+
+    .nav-item {
+      margin: 0 15px;
+
+    }
+
+    .nav-list {
+      text-decoration: none;
+      font-size: 1.15rem;
+      color: #fff;
+      font-weight: 300;
+      font-style: italic;
+      position: absolute;
+      width: 91px;
+      height: 29px;
+      left: 1018px;
+      top: 103px;
+
+      font-family: 'Inter';
+      font-style: italic;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .login-button button {
+      border: none;
+      background-color: #FBADAD;
+      color: black;
+      border-radius: 20px;
+      width: 130px;
+      height: 60px;
+
+
+
+    }
+
+    .login-button button {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.1rem;
+      top: -54px;
+
+    }
+
+    footer {
+      position: fixed;
+      width: 100%;
+      height: 20px;
+      left: 0px;
+      bottom: 0px;
+      background: #fecccc;
+      text-align: center;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 200;
+      line-height: 15px;
+      letter-spacing: 0em;
+
+    }
+
+    body {
+      position: fixed;
+      background-image: url("/static/assets/Body.png");
+    }
+
+    section {
+      position: absolute;
+      width: 1755px;
+      height: 760px;
+      left: 47px;
+      top: 162px;
+      background: #FFFFFF;
+      border-radius: 100px;
+      text-align: center;
+    }
+
+    #divBusca {
+      background-color: #FFFFFF;
+      position: absolute;
+      border: solid 1px;
+      border-radius: 15px;
+      ;
+      width: 550px;
+      top: -74px
+    }
+
+    #txtBusca {
+      float: left;
+      background-color: transparent;
+      padding-left: 5px;
+      font-style: italic;
+      font-size: 18px;
+      border: none;
+      height: 50px;
+      width: 500px;
+    }
+
+    .loginimage {
+      position: absolute;
+      width: 32px;
+      height: 27.68px;
+      left: 1138px;
+      top: 46px;
+
+    }
+
+    .retangulo2 {
+      position: absolute;
+      width: 845px;
+      height: 708px;
+      left: 448px;
+      top: 10px;
+      background: #EFEFEF;
+      border-radius: 100px;
+      font-family: Inter;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+
+    }
+
+    .btn {
+      border: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 10px;
+      cursor: pointer;
+      width: 400px;
+    }
+
+    .btn-pink {
+      background: #FBADAD;
+      box-shadow: 0 5px 0 #FBADAD;
+    }
+
+    .btn-pink:hover {
+      background: pink;
+      box-shadow: 0 5px 0 #FBADAD;
+      color: black;
+    }
+
+    .btn-pink:active {
+      box-shadow: none;
+      position: relative;
+      top: 5px;
+    }
+
+    .email {
+      width: 451px;
+      height: 32px;
+
+    }
+
+    .senha {
+
+      width: 451px;
+      height: 32px;
+
+    }
+  </style>
+</head>
+
+<body img src="{% static 'assets/Body.png' %}">
+  <header>
+    <nav class="nav-pet">
+      <div class="logo">
+        <a href="{% url 'inicio' %}"> <img src="{% static 'assets/NossoPetShop.png' %}"></a>
+
+
+      </div>
+      <div class="nav-list" div style="color:black;">
+        <ul>
+          <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link" div
+              style="color:black; text-decoration: none;">Serviços</a></li>
+          <li class="nav-item"><a href="{% url 'produtos' %}" class="nav-link" div
+              style="color:black;text-decoration: none;">Produtos</a></li>
+          <li class="nav-item"><a href="{% url 'agendamentos' %}" class="nav-link" div
+              style="color:black; text-decoration: none;">Agendamentos</a></li>
+          <li class="nav-item"><a href="{% url 'contatos' %}" class="nav-link" div
+              style="color:black; text-decoration: none;">Contatos</a></li>
+
+        </ul>
+        <div id="divBusca">
+          <a href="#"></a><input type="text" id="txtBusca" placeholder="Pesquisar..." />
+
+          <a href="#"> <img src="{% static 'assets/lupa.png' %}" id="btnBusca" alt="Buscar" height="35" width="40" />
+        </div>
+      </div>
+
+      </div>
+      <div class="login-button">
+        <button><a href="{% url 'login' %}">
+            <div div style="height: 32px;
+                    width: 52px; ">
+              <img src="{% static 'assets/login2.png' %}" alt="Image" width="40" height="35">
+            </div>
+            <div div style="font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 17px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    margin-top: -35px;
+                    margin-left: 30px;
+                    color:black;
+                    text-decoration: none;
+                    "><strong>Entrar</strong><br>
+              <p>Cadastrar</p>
+            </div>
+          </a></button>
+      </div>
+
+    </nav>
+
+  </header>
+  <section>
+
+
+    <div class="retangulo">
+      <div class="retangulo2"><br>
+        {% if status == '0' %}
+          <p>Usuário já cadastrado</p>
+        {% endif %}
+
+        {% if status == '1' %}
+          <p>Usuário cadastrado com sucesso</p>
+        {% endif %}
+
+        {% if status == '2' %}
+          <p>Erro interno do sistema</p>
+        {% endif %}
+
+        {% if status == '3' %}
+          <p>Preencha todos os campos</p>
+        {% endif %}
+
+        {% if status == '4' %}
+          <p>Preencha os campos corretamente</p>
+        {% endif %}
+
+        <h1>Aproveite nossos serviços!</h1><br>
+        <form action="{% url 'processa_cadastro' %}" method="POST"> {% csrf_token %}
+          <p></p>
+          <div div style="margin-left: -350px; font-size:18px;">Nome completo:</div>
+          <input type="texto" name="CAD_NOME" required id="txtnome" class="txtnome"
+            style="width:500px; height: 35px; border-radius: 15px; border:none">
+          <br>
+          <p></p>
+          <div div style="margin-left: -430px; font-size:18px;">E-mail:</div>
+          <input type="email" name="CAD_EMAIL" required id="txte" class="email"
+            style="width:500px; height: 35px;  border-radius: 15px; border:none">
+          <p></p>
+          <div div style="margin-left: -450px; font-size:18px;">Rua:</div>
+          <input type="texto" name="CAD_RUA" required id="txtr" class="txtr"
+            style="width:500px; height: 35px; border-radius: 15px; border:none">
+
+          <div style="display: flex; font-size:18px;">
+            <div style="margin-left: 175px;">
+              <p>Número:</p>
+              <input type="text" name="CAD_NUMERO" required id="txtn" class="txtn"
+                style="width: 100px; height: 35px; border-radius: 15px; border: none;">
+            </div>
+            <div div style="margin-left: 80px;">
+              <p>Bairro:</p>
+              <input type="text" name="CAD_BAIRRO" required id="txtb" class="txtb"
+                style="width: 320px; height: 35px; border-radius: 15px; border: none;">
+            </div>
+          </div>
+
+
+          <p></p>
+          <div div style="margin-left: -420px; font-size:18px;">Cidade:</div>
+          <input type="texto" name="CAD_CIDADE" required id="txtc" class="txtcid"
+            style="width:500px; height: 35px;  border-radius: 15px; border:none">
+          <p></p>
+          <div div style="margin-left: -420px; font-size:18px;">Contato:</div>
+          <input type="texto" placeholder=" (XX)XXXX-XXXX" name="CAD_CONTATO"
+            required id="txtcont" class="txtcont"
+            style="width:500px; height: 35px;  border-radius: 15px; border:none"><br>
+          <p>
+          <div div style="margin-left: -430px; font-size:18px;">Senha:</p>
+          </div>
+          <input type="password" name="CAD_SENHA" required id="txts" class="senha"
+            style="width:500px; height: 35px;  border-radius: 15px; border:none"><br><br>
+
+          <p><input type="submit" name="CADASTRAR" class="btn btn-pink" value="Cadastrar" id="cad" div
+              style="font-weight: bold; border-radius:10px" onclick="cadastrar()"></p><br>
+        </form>
+
+      </div>
+
+    </div>
+    </div>
+    <div id="res">
+
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Nosso Pet Shop. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>

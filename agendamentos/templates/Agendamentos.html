@@ -1,0 +1,366 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aserts/css/style.css">
+
+    <title>Menu</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+  left: 0;
+  width: 100%;
+    background:  #fecccc;
+    box-shadow: 0px, 3px, 10 px black;
+    font-family: Marck Script;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+
+font-family: Inter;
+font-size: 48px;
+font-weight: 400;
+line-height: 58px;
+letter-spacing: 0em;
+text-align: left;
+height: 140px;
+
+
+}
+.nav-pet{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+
+
+}
+.logo{
+    display:flex;
+    align-items: center;
+}
+.logo h1{
+    color: black;
+  
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+}
+.nav-item{
+    margin: 0 15px;
+
+}
+.nav-list{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+width: 91px;
+height: 29px;
+left: 1018px;
+top: 103px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+}
+.login-button button{
+    border: none;
+    background-color: #FBADAD ;
+    color: black;
+    border-radius: 20px;
+    width: 130px;
+    height: 60px;
+    
+
+
+}
+.login-button button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    top: -54px; 
+   
+}
+
+footer{
+    position: fixed;
+            width: 100%;
+            height: 20px;
+            left: 0px;
+            bottom: 0px;
+            background:  #fecccc;
+            text-align: center;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 200;
+            line-height: 15px;
+            letter-spacing: 0em;
+
+        }
+        body{
+            background-image: url("/static/assets/Body.png");
+        }
+        section{
+            position: absolute;
+            width: 1755px;
+            height: 760px;
+            left: 47px;
+            top: 162px;
+            background: #FFFFFF;
+            border-radius: 100px;
+            text-align: center;
+
+        }
+        #divBusca{
+  background-color:#FFFFFF;
+  position: absolute;
+  border:solid 1px;
+  border-radius: 15px;;
+  width:550px;
+  top: -74px
+
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:50px;
+  width:500px;
+}
+
+.loginimage{
+    position: absolute;
+width: 32px;
+height: 27.68px;
+left: 1138px;
+top: 46px;
+
+}
+.retangulo2{
+    position: absolute;
+width: 745px;
+height: 708px;
+left: 448px;
+top: 10px;
+background:#EFEFEF;
+border-radius: 100px;
+font-family: Inter;
+font-size: 24px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+margin-left: 50px;
+
+
+}
+.btn{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor:pointer;
+    width: 400px;
+}
+.btn-pink{
+    background: #FBADAD ;
+    box-shadow:0 5px 0 #FBADAD;
+}
+.btn-pink:hover{
+    background:pink;
+    box-shadow:0 5px 0 #FBADAD;
+    color:black;
+}
+.btn-pink:active{
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+.email{
+width: 451px;
+height: 32px;
+
+}
+.senha{
+    
+    width: 451px;
+    height: 32px;
+  
+    }
+
+
+
+        
+    </style>
+</head>
+<body img src="{% static 'assets/Body.png' %}"> 
+    <header >
+        <nav class="nav-pet">
+            <div class="logo">
+                <a href="{% url 'inicio' %}"> <img src="{% static 'assets/NossoPetShop.png' %}">
+               
+
+            </div>
+            <div class="nav-list"  div style="color:black;">
+                <ul >
+                    <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link" div style="color:black; text-decoration: none;">Serviços</a></li>
+                    <li class="nav-item"><a href="{% url 'produtos' %}" class="nav-link" div style="color:black;text-decoration: none;">Produtos</a></li>
+                    <li class="nav-item"><a href="{% url 'agendamentos' %}" class="nav-link" div style="color:black; text-decoration: none;">Agendamentos</a></li>
+                    <li class="nav-item"><a href="{% url 'contatos' %}" class="nav-link"div style="color:black; text-decoration: none;">Contatos</a></li>
+                
+                </ul>
+                <div id="divBusca">
+                    <a href="#"></a><input type="text" id="txtBusca" placeholder="Pesquisar..."/>
+                 
+                    <a href="#"> <img src="{% static 'assets/lupa.png' %}" id="btnBusca" alt="Buscar" height="35" width="40"/>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="login-button" >
+
+              
+                    <div div style="font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 17px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    margin-top: -35px;
+                    margin-left: 30px;
+                    color:black;
+                    text-decoration: none;
+                    "><strong></strong><br>
+                    <strong></strong></a>
+                </a></button>  
+            </div>
+            
+        </nav>
+        
+    </header>
+    <section>
+        <div class="retangulo">
+
+            <form class="retangulo2" method="POST" action="{% url 'processa_agendamento' %}">{% csrf_token %}
+
+                {% if status == '0' %}
+                    <p>Agendamento realizado</p>
+                {% endif %}
+
+                {% if status == '1' %}
+                    <p>Erro interno do sistema</p>
+                {% endif %}
+
+                {% if status == '2' %}
+                    <p>Preencha os campos corretamente</p>
+                {% endif %}
+
+                {% if status == '3' %}
+                    <p>Data ou Hora inválida</p>
+                {% endif %}
+
+              <br>
+                <h>Qual tipo de atendimento você deseja?</h><br><br>
+
+                <div style="display: flex; justify-content: right;">
+                    <div div style="margin-right: 60px;">
+                      <input type="radio" name="radsex" id="BT" value="bt" checked>
+                      <label for="BT" style="font-size: 20px;">Banho e tosa</label>
+                    </div>
+                  
+                    <div style="margin-right: 100px;">
+                      <input type="radio" name="radsex" value="cm" id="CM">
+                      <label for="CM" style="font-size: 20px;">Consultas médicas</label>
+                    </div>
+                  
+                    <div style="margin-right: 60px;">
+                      <input type="radio" name="radsex" value="ad" id="AD">
+                      <label for="AD" style="font-size: 20px;">Adestramento</label>
+                    </div>
+                  </div>
+                  
+                
+
+               <br> <p div style="margin-right: 300px; font-size: 20px;">Nome do pet:</p>
+                <p div style=" margin-top:-30px;"><input type="texto" name="nomepet" placeholder=" Nome do seu animal " id= "txtnomepet" class="txtnomepet" div style="width:250px; height: 35px; margin-right: -100px;border-radius: 5px; border: 1px solid black;" ></p><br>
+
+                <p div style="margin-right: 320px; font-size: 20px;">Tipo do pet:</p>
+                    <p div style=" margin-top:-30px;  "><input type="texto" name="tp" placeholder=" Ex: gato ou cachorro" id="txttp" class="txttp" style="width:250px; height: 35px; margin-right: -100px;border-radius: 5px; border: 1px solid black;"></p><br>
+
+                    <p div style="margin-right: 370px; font-size: 20px;">Raça:</p>
+                        <p div style=" margin-top:-30px;  "><input type="texto" name="raça" placeholder=" Opcional" id="txtr" class="txtr" style="width:250px; height: 35px; margin-right: -100px;border-radius: 5px; border: 1px solid black;"></p><br>
+
+                        <p div style="margin-right: 300px; font-size: 20px;">Responsável:</p>
+                            <p div style=" margin-top:-30px;  "><input type="texto" name="responsavel" placeholder=" Seu nome" id = "txtresp" class="txtresp" style="width:250px; height: 35px; margin-right: -100px;border-radius: 5px; border: 1px solid black;"></p><br><br>
+
+                            <div style="display: flex; font-size:20px; margin-top: -40px;"> 
+                            <div style=" margin-left: 150px;">
+                            <p>Dia do agendamento:</p>
+                            <p><input type="date" name="dia" id="txtd" div style=" width: 180px;"></p></div>
+
+                                <div  div style="margin-left:100px;">
+                         <p>Horário do agendamento:</p>
+                         <p><input type="time" name="hora" id="txth" style="width:180px;"></p></div></div><br><br><br>
+
+                         <p><input type="submit" class= "btn btn-pink" value="Gerar agendamento" div style="font-weight: bold; border-radius:10px" onclick="entrar()"></p><br>
+
+                        </form>
+                    </div>
+                </div>  
+            </div>  
+            <div id="res">
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; 2023 Nosso Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

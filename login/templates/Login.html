@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+
+    <title>Menu</title>
+    
+</head>
+<body img src="{% static 'assets/Body.png' %}"> 
+    <header >
+        <nav class="nav-pet">
+            <div class="logo">
+                <a href="{% url 'inicio' %}"> <img src="{% static 'assets/NossoPetShop.png' %}">
+               
+
+            </div>
+            <div class="nav-list"  div style="color:black;">
+                <ul >
+                    <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link" div style="color:black; text-decoration: none;">Serviços</a></li>
+                    <li class="nav-item"><a href="{% url 'produtos' %}" class="nav-link" div style="color:black;text-decoration: none;">Produtos</a></li>
+                    <li class="nav-item"><a href="{% url 'agendamentos' %}" class="nav-link" div style="color:black; text-decoration: none;">Agendamentos</a></li>
+                    <li class="nav-item"><a href="{% url 'contatos' %}" class="nav-link"div style="color:black; text-decoration: none;">Contatos</a></li>
+                
+                </ul>
+                <div id="divBusca">
+                    <a href="#"></a><input type="text" id="txtBusca" placeholder="Pesquisar..."/>
+                 
+                    <a href="#"> <img src="{% static 'assets/lupa.png' %}" id="btnBusca" alt="Buscar" height="35" width="40"/>
+                    </div>
+                  </div>
+
+            </div>
+
+                    <div div style="font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 17px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    margin-top: -35px;
+                    margin-left: 30px;
+                    color:black;
+                    text-decoration: none;
+                    "><strong></strong><br> <p></p></div>
+                </a></button>  
+            </div>
+            
+        </nav>
+        
+    </header>
+    <section>
+        <div class="retangulo">
+     
+            <form method="POST" action="{% url 'validar_login' %}" class="retangulo2">{% csrf_token %} 
+
+                {% if status == '1' %}
+                    <p>Email ou senha inválidos</p>
+                {% endif %}
+
+                {% if status == '2' %}
+                    <p>Faça login para ter acesso completo ao sistema</p>
+                {% endif %}
+
+                <br><br><br><br><br>
+                <h1>Bem-vindo!</h1><br>
+                <p></p><div div style="margin-left: -400px; font-size:18px;">E-mail:</div>
+                    <input type="email" name="e-mail" id= "txte" class="email" style="border-radius: 15px; border:none"><br><br>
+                    <p><div div style="margin-left: -400px; font-size:18px; ">Senha:</p></div>
+                        <input type="password" name="senha" id="txts" class="senha" style="border-radius: 15px; border:none"><br><br>
+                       
+                        <p><input type="submit" class= "btn btn-pink" value="Entrar" div style="font-weight: bold; border-radius:10px" onclick="entrar()"></p><br>
+                   
+                        <p><a href="{% url 'cadastro' %}" div style="color:black;" ><div div style="margin-left: -300px; font-size:18px; margin-top: -20px;text-decoration: underline;  border-radius:10px" >Cadastre-se</p></a></div>
+    
+            </fomr>
+    
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Nosso Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

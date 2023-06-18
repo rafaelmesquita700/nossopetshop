@@ -1,0 +1,264 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aserts/css/style.css">
+
+    <title>Menu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fecccc;
+            box-shadow: 0px, 3px, 10 px black;
+            font-family: Marck Script;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            font-family: Inter;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 58px;
+            letter-spacing: 0em;
+            text-align: left;
+            height: 140px;
+
+
+        }
+
+        .nav-pet {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 6rem;
+
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: black;
+
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .nav-list ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+        }
+
+        .nav-item {
+            margin: 0 15px;
+
+        }
+
+        .nav-list {
+            text-decoration: none;
+            font-size: 1.15rem;
+            color: #fff;
+            font-weight: 300;
+            font-style: italic;
+            position: absolute;
+            width: 91px;
+            height: 29px;
+            left: 1018px;
+            top: 103px;
+
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .login-button button {
+            border: none;
+            background-color: #FBADAD;
+            color: black;
+            border-radius: 20px;
+            width: 130px;
+            height: 60px;
+
+
+
+        }
+
+        .login-button button {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.1rem;
+            top: -54px;
+
+        }
+
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 20px;
+            left: 0px;
+            bottom: 0px;
+            background: #fecccc;
+            text-align: center;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 200;
+            line-height: 15px;
+            letter-spacing: 0em;
+
+        }
+
+        body {
+            background-image: url("/static/assets/Body.png");
+        }
+
+        section {
+            position: absolute;
+            width: 1755px;
+            height: 760px;
+            left: 47px;
+            top: 162px;
+            background: #FFFFFF;
+            border-radius: 100px;
+            text-align: center;
+        
+        }
+   
+        #divBusca {
+            background-color: #FFFFFF;
+            position: absolute;
+            border: solid 1px;
+            border-radius: 15px;
+            ;
+            width: 550px;
+            top: -74px
+        }
+
+        #txtBusca {
+            float: left;
+            background-color: transparent;
+            padding-left: 5px;
+            font-style: italic;
+            font-size: 18px;
+            border: none;
+            height: 50px;
+            width: 500px;
+        }
+
+        .loginimage {
+            position: absolute;
+            width: 32px;
+            height: 27.68px;
+            left: 1138px;
+            top: 46px;
+
+        }
+    </style>
+</head>
+
+<body img src="{% static 'assets/Body.png' %}">
+    <header>
+        <nav class="nav-pet">
+            <div class="logo">
+                <a href="{% url 'inicio' %}"> <img src="{% static 'assets/NossoPetShop.png' %}">
+
+
+            </div>
+            <div class="nav-list" div style="color:black;">
+                <ul>
+                    <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link" div
+                            style="color:black; text-decoration: none;">Serviços</a></li>
+                    <li class="nav-item"><a href="{% url 'produtos' %}" class="nav-link" div
+                            style="color:black;text-decoration: none;">Produtos</a></li>
+                    <li class="nav-item"><a href="{% url 'agendamentos' %}" class="nav-link" div
+                            style="color:black; text-decoration: none;">Agendamentos</a></li>
+                    <li class="nav-item"><a href="{% url 'contatos' %}" class="nav-link" div
+                            style="color:black; text-decoration: none;">Contatos</a></li>
+
+                </ul>
+                <div id="divBusca">
+                    <a href="#"></a><input type="text" id="txtBusca" placeholder="Pesquisar..." />
+
+                    <a href="#"> <img src="{% static 'assets/lupa.png' %}" id="btnBusca" alt="Buscar" height="35" width="40" />
+                </div>
+            </div>
+
+            </div>
+          
+
+        </nav>
+
+    </header>
+    <section>
+        <div class="retangulo">
+
+            <div> <a href="{% url 'agendamentos' %}"><img src="{% static 'servicos/assets/Post_banho_e_tosa.jpg' %}"
+                        style="width:600px; height: 300px ; margin-right: 1000px; margin-top: 70px;">
+                    <p style="color:black;margin-right: 1000px;margin-top: -360px; font-family: 'Luxurious Script';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 58px;">Banho e Tosa</p>
+                </a></div>
+        </div>
+        <div class="retangulo1">
+            <a href="{% url 'agendamentos' %}"> <img src="{% static 'servicos/assets/Consulta.jpg' %}"
+                    style="width:600px ; height: 300px ; margin-left: 1000px; margin-top: -10px;">
+                <p style="color:black; margin-left: 1000px;  margin-top: -360px; font-family: 'Luxurious Script';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;">Consulta Médica</p>
+            </a>
+        </div>
+
+        <div class="retangulo2">
+
+            <a href="{% url 'agendamentos' %}"> <img src="{% static 'servicos/assets/Adestramento.jpg' %}"
+                    style="width:600px ; height: 300px ; margin-top:350px; align: center">
+                <p style="color:black; align:center; margin-top:-360px; font-family: 'Luxurious Script';
+           font-style: normal;
+           font-weight: 400;
+           font-size: 48px;
+           line-height: 58px;">Adestramento</p>
+            </a>
+
+        </div>
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Nosso Pet Shop. Todos os direitos reservados.</p>
+    </footer>
+
+
+</body>
+
+</html>
